@@ -1,7 +1,7 @@
 /* globals require console */
 
 // App modules
-const config = require("./config");
+const config = require("./config/environment");
 const app = require("./config/application");
 require("./routers");
 
