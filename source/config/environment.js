@@ -3,13 +3,19 @@
  */
 "use strict";
 
+let config;
+
 if (process.env.NODE_ENV === "production") {
 
-    module.exports = {
+    config = {
         session: process.env.EXPRESS_SESSION,
         connectionString: process.env.CONNECTION_STRING
     };
 }
 else {
-    module.exports = require("../../secrets");
+    config = require("../../secrets");
 }
+
+config.port = process.env.PORT || 3001;
+
+module.exports = config;
