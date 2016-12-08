@@ -8,7 +8,7 @@
     "postinstall": "bower install",
     "prestart": "npm install",
     "start": "cd source && node app.js",
-    "inject-resources": "gulp inject-resources"
+    "inject-resources": "[ \"$NODE_ENV\" = production ] || gulp inject-resources"
   },
   "author": "Team C",
   "license": "MIT",
