@@ -7,7 +7,7 @@ const path = require("path");
 const Team = require("../models/team.js");
 const User = require("../models/user.js");
 
-const CONNECTION_URL = require("../../secrets").connectionString;
+const CONNECTION_URL = require("../config/environment").connectionString;
 
 module.exports = (function () {
     mongoose.Promise = global.Promise;
